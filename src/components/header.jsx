@@ -1,6 +1,8 @@
+import './header.css';
+
 export function Header() {
   return (
-    <header>
+    <header className='header'>
       <h1>Mi Portfolio</h1>
     </header>
   )
