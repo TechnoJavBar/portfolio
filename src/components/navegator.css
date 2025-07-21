@@ -1,0 +1,10 @@
+.navegator {
+    top: 0;
+
+}
+
+.navegator ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+}
