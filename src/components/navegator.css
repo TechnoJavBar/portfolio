@@ -1,10 +1,61 @@
 .navegator {
     top: 0;
-
 }
 
 .navegator ul {
     display: flex;
     list-style: none;
     flex-direction: row;
+}
+
+.navegator li {
+    margin: 10px 20px;
+    
+}
+
+.navegator a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 2px 5px;
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    padding-bottom: 2px;
+}
+.navegator a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: #0077cc;
+    transition: width 0.5s ease;
+    box-shadow: 2px 2px 6px rgb(174, 167, 167);
+
+    }
+
+.navegator a:hover::after {
+      width: 100%;
+      
+    }
+
+.navegator a:active {
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
