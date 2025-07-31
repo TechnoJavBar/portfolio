@@ -3,6 +3,7 @@ import {Header} from './components/header.jsx'
 import {Presentation} from './components/presentation.jsx'
 import {AboutMe} from './components/aboutMe.jsx'
 import { Skills } from './components/skills.jsx'
+import {FaGithub, FaInstagram, FaLinkedin, FaFacebook } from 'react-icons/fa'
 
 function App() {
   return (
@@ -10,10 +11,10 @@ function App() {
       <Header />
       <aside className='aside'>
         <ul>
-          <li><a href='#'><i class="fa-brands fa-github fa-2xl iconGithub"></i></a></li>
-          <li><a href='#'><i class="fa-brands fa-linkedin fa-2xl iconLinkedin"></i></a></li>
-          <li><a href='#'><i class="fa-brands fa-instagram fa-2xl iconInstagram"></i></a></li>
-          <li><a href='#'><i class="fa-brands fa-facebook fa-2xl iconFacebook"></i></a></li>
+          <li><a href='#'><FaGithub /></a></li>
+          <li><a href='#'><FaLinkedin /></a></li>
+          <li><a href='#'><FaInstagram /></a></li>
+          <li><a href='#'><FaFacebook /></a></li>
         </ul>
       </aside>
       <br />
