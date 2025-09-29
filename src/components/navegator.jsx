@@ -1,13 +1,15 @@
 import './navegator.css';
+import { Link } from 'react-router-dom';
 
 export function Navegator() {
     return (
         <nav className="navegator">
             <ul>
-                <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><Link to="/">Inicio</Link></li>
+                <li><Link to="/about">Sobre mí</Link></li>
+                <li><Link to="/skills">Habilidades</Link></li>
+                <li><Link to="/projects">Proyectos</Link></li>
+                <li><Link to="/contact">Contacto</Link></li>
             </ul>
         </nav>
     )
