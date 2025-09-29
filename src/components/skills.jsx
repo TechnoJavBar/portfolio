@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { DiReact, DiJsBadge, DiHtml5, DiGithubBadge, DiCss3, DiPython, DiBootstrap, DiDatabase, DiDjango, DiDocker, DiEclipse, DiGit, DiLinux, DiVisualstudio, DiWindows, DiMysql } from "react-icons/di";
 import "./skills.css";
+import {motion} from "framer-motion";
 
 const skills = [
   {
@@ -109,43 +110,27 @@ export function Skills() {
   };
 
   return (
-    // <section className="skills-section">
-    //   <h2>Habilidades</h2>
-    //   <div className="skills-grid">
-    //     {skills.map((skill, index) => (
-    //       <div
-    //         key={index}
-    //         className="skill-card"
-    //         style={{ backgroundColor: skill.color }}
-    //         onClick={() => handleClick(index)}
-    //       >
-    //         <div className="skill-front">
-    //           <div className="icon">{skill.icon}</div>
-    //           <h3>{skill.name}</h3>
-    //         </div>
-    //         {activeIndex === index && (
-    //           <div className="skill-back">
-    //             <p>{skill.description}</p>
-    //           </div>
-    //         )}
-    //       </div>
-    //     ))}
-    //   </div>
-    // </section>
     <div className="skills-section" id="skills">
         <div className="skills-grid">
         {
             skills.map((skill) => (
-                <div className="skill-card" key={skill.name} style={{ backgroundColor: skill.color }} onClick={() => handleClick(skill.name)}>
+                <motion.div 
+                className="skill-card" 
+                key={skill.name} 
+                style={{ backgroundColor: skill.color }} 
+                onHoverStart={() => handleClick(skill.name)}
+                onHoverEnd={() => handleClick(null)}
+                whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                >
                     <div className="skill-front">
                         {skill.icon}
                     </div>
-                    {/* {activeIndex === skill.name && (
-                    <div className="skill-back">
+                    {activeIndex === skill.name && (
+                    <div className="skill-back" style={{ backgroundColor: skill.color }}>
                      <p>{skill.description}</p>
                     </div>
-                    )} */}
-                </div>
+                    )}
+                </motion.div>
             ))
         }
         </div>
