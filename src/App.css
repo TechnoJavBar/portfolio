@@ -2,33 +2,6 @@
     background-color: black;
 }
 
-.aside {
-    background-color: rgb(150, 150, 150);
-    position: fixed;
-    top: 250px;
-    left: 25px;
-    width: 50px;
-    height: auto;
-    align-items: center;    /* o el ancho que quieras */
-    border-radius: 50px;
-}
-
-.aside ul {
-    display: flex;
-    background-color: rgb(150, 150, 150);
-    flex-direction: column;
-    top: 0;
-    list-style: none;
-    padding: 0;
-    align-items: center;
-}
-
-.aside li {
-    background-color: rgb(150, 150, 150);
-    margin: 10px 0;
-    color: black;
-}
-
 .section {
     position: relative;
     top: 0;
@@ -36,28 +9,4 @@
     width: calc(100% - 150px);
     height: auto;
     padding: 20px;
-}
-
-.iconGithub {
-    color: black;
-}
-
-.iconLinkedin {
-    color: rgb(81, 56, 248);
-}
-
-.iconInstagram {
-    color: rgb(247, 0, 255);
-}
-
-.iconFacebook {
-    color: rgb(0, 0, 255);
-}
-
-.iconGithub:hover,
-.iconLinkedin:hover,
-.iconInstagram:hover,
-.iconFacebook:hover {
-    transform: scale(1.2);
-    transition: transform 0.3s ease;
 }
