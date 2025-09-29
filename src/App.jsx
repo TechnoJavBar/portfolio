@@ -1,30 +1,25 @@
 import './App.css'
 import {Header} from './components/header.jsx'
-import {Presentation} from './components/presentation.jsx'
-import {AboutMe} from './components/aboutMe.jsx'
-import { Skills } from './components/skills.jsx'
-import {FaGithub, FaInstagram, FaLinkedin, FaFacebook } from 'react-icons/fa'
+import { Routes, Route } from 'react-router-dom'
+import {Welcome} from './pages/welcome.jsx'
+import {AboutMePage} from './pages/aboutMePage.jsx'
+import { SkillsPage } from './pages/skillsPage.jsx'
+import { ProjectsPage } from './pages/projectsPage.jsx'
+import { ContactPage } from './pages/contactPage.jsx'
+import { LinksAside } from './components/linksAside.jsx'
 
 function App() {
   return (
     <main className="main">
       <Header />
-      <aside className='aside'>
-        <ul>
-          <li><a href='#'><FaGithub /></a></li>
-          <li><a href='#'><FaLinkedin /></a></li>
-          <li><a href='#'><FaInstagram /></a></li>
-          <li><a href='#'><FaFacebook /></a></li>
-        </ul>
-      </aside>
-      <br />
-      <section className='section'>
-        <Presentation />
-      </section>
-      <section className='section'>
-        <AboutMe />
-      </section>
-      <Skills />
+      <Routes>
+        <Route path='/' element={<Welcome/>}/>
+        <Route path='/about' element={<AboutMePage/>}/>
+        <Route path='/skills' element={<SkillsPage/>}/>
+        <Route path='/projects' element={<ProjectsPage/>}/>
+        <Route path='/contact' element={<ContactPage/>}/>
+      </Routes>
+      <LinksAside />
     </main>
   )
 }
