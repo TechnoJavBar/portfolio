@@ -1,5 +1,6 @@
 import './presentation.css'
 import profilePhoto from '../assets/user.jpeg'
+import { ImagenProfile } from './imagenProfile'
 export function Presentation() {
     return (
         <div className="presentacion">
@@ -8,7 +9,7 @@ export function Presentation() {
                 <p>Desarrollador aplicaciones web</p>
             </div>
             <div className="presentacionImg">
-                <img src={profilePhoto} alt="Profile"></img>
+                <ImagenProfile imagen={profilePhoto} alt="Foto de perfil Antonio Barranca" />
             </div>
         </div>
     )
