@@ -1,7 +1,7 @@
 import {ImagenProfile} from "../components/imagenProfile.jsx";
 import profilePic from "../assets/user.jpeg";
 import {AboutMe} from "../components/aboutMe.jsx";
-import "../styles/aboutMePage.css";
+import "./aboutMePage.css";
 
 export function AboutMePage(){
     return(
