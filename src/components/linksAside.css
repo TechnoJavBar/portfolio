@@ -11,7 +11,7 @@
 
 .aside ul {
     display: flex;
-    background-color: rgb(150, 150, 150);
+    background-color: transparent;
     flex-direction: column;
     top: 0;
     list-style: none;
@@ -20,7 +20,7 @@
 }
 
 .aside li {
-    background-color: rgb(150, 150, 150);
+    background-color: transparent;
     margin: 10px 0;
     color: black;
 }
@@ -33,7 +33,7 @@
     margin: 2px 0;
 }
 .FaGithub{
-    color:black;
+    color:rgb(255, 255, 255);
 }
 .FaLinkedin{
     color: rgb(81, 56, 248);
@@ -48,7 +48,7 @@
 
 
 .iconGithub {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .iconLinkedin {
