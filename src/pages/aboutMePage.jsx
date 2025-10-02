@@ -1,5 +1,5 @@
 import {ImagenProfile} from "../components/imagenProfile.jsx";
-import profilePic from "../assets/user.jpeg";
+import profilePic from "../assets/fotoAntonioJavierBarrancajimenez.png";
 import {AboutMe} from "../components/aboutMe.jsx";
 import "./aboutMePage.css";
 
