@@ -3,13 +3,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: border-box;
-}
-
-.section {
-    position: relative;
-    top: 0;
-    left: 100px;
-    width: calc(100% - 150px);
-    height: auto;
-    padding: 20px;
+    background-attachment: fixed;
+    height: 100vh;
 }
