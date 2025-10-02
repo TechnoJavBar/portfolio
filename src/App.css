@@ -1,5 +1,8 @@
 .main {
-    background-color: black;
+    background-image: url('./assets/fondoPorfolio.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
 }
 
 .section {
