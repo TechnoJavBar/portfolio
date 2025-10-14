@@ -3,10 +3,11 @@ import "./projectObject.css";
 import { FaGithub } from "react-icons/fa";
 import {motion} from "framer-motion";
 
-export function ProjectObject({image, title, description, link1, link2}){
+export function ProjectObject({key, image, title, description, link1, link2}){
     return(
         <motion.div 
         className="projectObject"
+        key={key}
         whileHover={{
             scale: 1.05,
             transition: { duration: 0.3 },
