@@ -1,0 +1,98 @@
+.containerForm{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 150px;
+    padding-top: 150px;
+    background-color: transparent;
+}
+
+.form {
+  max-width: 800px; /* más ancho */
+  padding: 2.5rem;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  border-radius: 1rem;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Agrupación de los inputs en la misma fila */
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap; /* para que se adapte en pantallas pequeñas */
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* los inputs se reparten el espacio */
+  min-width: 250px;
+}
+
+.form-control input,
+.form-control textarea {
+  padding: 0.9rem 1rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  border-color: #06d7a0;
+  box-shadow: 0 0 6px rgba(6, 215, 160, 0.3);
+}
+
+.form-control textarea {
+  resize: none;
+}
+
+.form-control p {
+  color: #e63946;
+  font-size: 0.9rem;
+  margin: 0.4rem 0 0 0;
+}
+
+button[type="submit"] {
+  background: #06d7a0;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background: #04b88b;
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* ✅ Responsivo */
+@media (max-width: 700px) {
+  .form {
+    padding: 1.8rem;
+    margin: 2rem 1rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+.error{
+    border: 1px solid red;
+    color: red;
+}
