@@ -1,79 +1,53 @@
-import "./navegator.css";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { linearGradient } from "framer-motion/client";
+import "./navegator.css"; // estilos base con gradiente
 
 const buttonsVariants = {
   hover: {
     scale: 1.1,
-    transition: {
-      duration: 0.3,
-      ease: "easeInOut",
-    },
+    transition: { duration: 0.3, ease: "easeInOut" },
   },
-
   tap: {
     scale: 0.9,
-    transition: {
-      duration: 0.2,
-    },
+    transition: { duration: 0.2 },
   },
 };
 
 export function Navegator() {
+  const navItems = [
+    { path: "/", name: "Inicio" },
+    { path: "/about", name: "Sobre mí" },
+    { path: "/skills", name: "Habilidades" },
+    { path: "/projects", name: "Proyectos" },
+    { path: "/contact", name: "Contacto" },
+  ];
+
   return (
-    // <nav className="navegator">
-    //     <ul>
-    //         <li><Link to="/">Inicio</Link></li>
-    //         <li><Link to="/about">Sobre mí</Link></li>
-    //         <li><Link to="/skills">Habilidades</Link></li>
-    //         <li><Link to="/projects">Proyectos</Link></li>
-    //         <li><Link to="/contact">Contacto</Link></li>
-    //     </ul>
-    // </nav>
-    <nav className="navegator">
-      <ul>
-        <motion.li
-          variants={buttonsVariants}
-          whileHover="hover"
-          whileTap="tap"
-          className="nav-item"
-        >
-          <Link to="/">Inicio</Link>
-        </motion.li>
-        <motion.li
-          variants={buttonsVariants}
-          whileHover="hover"
-          whileTap="tap"
-          className="nav-item"
-        >
-          <Link to="/about">Sobre mí</Link>
-        </motion.li>
-        <motion.li
-          variants={buttonsVariants}
-          whileHover="hover"
-          whileTap="tap"
-          className="nav-item"
-        >
-          <Link to="/skills">Habilidades</Link>
-        </motion.li>
-        <motion.li
-          variants={buttonsVariants}
-          whileHover="hover"
-          whileTap="tap"
-          className="nav-item"
-        >
-          <Link to="/projects">Proyectos</Link>
-        </motion.li>
-        <motion.li
-          variants={buttonsVariants}
-          whileHover="hover"
-          whileTap="tap"
-          className="nav-item"
-        >
-          <Link to="/contact">Contacto</Link>
-        </motion.li>
-      </ul>
-    </nav>
+    <Navbar expand="lg" bg="transparent" variant="dark">
+      <Container>
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          className="gradient-toggle"
+        />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            {navItems.map((item) => (
+              <motion.div
+                key={item.path}
+                className="nav-item"
+                variants={buttonsVariants}
+                whileHover="hover"
+                whileTap="tap"
+              >
+                <Nav.Link as={Link} to={item.path} className="gradient-link">
+                  {item.name}
+                </Nav.Link>
+              </motion.div>
+            ))}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
