@@ -2,6 +2,9 @@ import "./contactForm.css";
 import { useState, useEffect, useRef } from "react";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import ToastContainer from "react-bootstrap/ToastContainer";
+import Toast from "react-bootstrap/Toast";
+import { set } from "react-hook-form";
 
 // Variants para la animación del icono
 const iconVariants = {
@@ -12,6 +15,10 @@ const iconVariants = {
 
 export function ContactForm() {
   const nombreRef = useRef();
+
+  const [showToast, setShowToast] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
 
   const [nombre, setNombre] = useState("");
   const [validNombre, setValidNombre] = useState(false);
@@ -42,9 +49,46 @@ export function ContactForm() {
     setValidMensaje(MENSAJE_REGEX.test(mensaje));
   }, [mensaje]);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("https://formspree.io/f/xwpwddra", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: nombre,
+          email: email,
+          message: mensaje,
+        }),
+      });
+
+      if (response.ok) {
+        setShowToast(true);
+        setIsError(false);
+        setToastMessage("¡Mensaje enviado con éxito!");
+      } else {
+        alert("Ocurrió un error al enviar el mensaje.");
+        setShowToast(true);
+        setIsError(true);
+        setToastMessage("Error al enviar el mensaje. Inténtalo de nuevo.");
+      }
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+      alert("Ocurrió un error al enviar el mensaje.");
+      setShowToast(true);
+      setIsError(true);
+      setToastMessage("Error al enviar el mensaje. Inténtalo de nuevo.");
+    } finally {
+      setNombre("");
+      setEmail("");
+      setMensaje("");
+    }
+  };
+
   return (
     <div className="containerForm">
-      <form className="form">
+      <form className="form" onSubmit={handleSubmit}>
         <div className="form-row">
           <div className="form-control">
             <label htmlFor="nombre">
@@ -174,6 +218,22 @@ export function ContactForm() {
           Contactar
         </motion.button>
       </form>
+      <ToastContainer position="top-end" className="p-3">
+        <Toast
+          onClose={() => setShowToast(false)}
+          show={showToast}
+          delay={3000}
+          autohide
+          bg={isError ? "danger" : "success"}
+        >
+          <Toast.Header>
+            <strong className="me-auto">
+              {isError ? "Error" : "satisfacción"}
+            </strong>
+          </Toast.Header>
+          <Toast.Body className="text-white">{toastMessage}</Toast.Body>
+        </Toast>
+      </ToastContainer>
     </div>
   );
 }
