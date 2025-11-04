@@ -1,76 +1,179 @@
-import './contactForm.css'
-import { useForm } from "react-hook-form"
+import "./contactForm.css";
+import { useState, useEffect, useRef } from "react";
+import { FaCheck, FaTimes } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
-export function ContactForm()
-{
-const {
-    register, 
-    handleSubmit, 
-    formState:{errors},
-    reset,
-    } = useForm();
+// Variants para la animación del icono
+const iconVariants = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.2 } },
+  exit: { opacity: 0, scale: 0.5, transition: { duration: 0.15 } },
+};
 
-const onSubmit = handleSubmit((data) =>{
-    reset();
-    alert("Formulario enviado");
-    console.log(data);
-});
+export function ContactForm() {
+  const nombreRef = useRef();
 
+  const [nombre, setNombre] = useState("");
+  const [validNombre, setValidNombre] = useState(false);
 
-    return(
-        <div>
-            <div className='containerForm'>
-                <form className='form' onSubmit={onSubmit}>
-                    <div className="form-row">
-                        <div className='form-control'>
-                            <input
-                                type="text"
-                                placeholder="Tu nombre"
-                                {...register('name', {
-                                required: "El nombre es obligatorio",
-                                pattern: {
-                                    message: "El nombre no es válido"
-                                }
-                                })}
-                            />
-                            {errors.name && <p>{errors.name.message}</p>}
-                        </div>
+  const [email, setEmail] = useState("");
+  const [validEmail, setValidEmail] = useState(false);
 
-                        <div className={`form-control${errors.email ? " error" : ""}`}>
-                            <input
-                                type="email"
-                                placeholder="Tu correo electrónico"
-                                {...register('email', {
-                                required: "El e-mail es obligatorio",
-                                pattern: {
-                                    value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
-                                    message: "El e-mail no es válido"
-                                }
-                                
-                                })}
-                                
-                            />
-                            {errors.email && <p>{errors.email.message}</p>}
-                        </div>
-                    </div>
-                    <div className='form-control'>
-                        <textarea 
-                        placeholder="Tu mensaje" 
-                        rows={3} 
-                        {...register('text', 
-                            {
-                                required: "debe escribir un mensaje", 
-                                pattern: {
-                                            message: "debe escribir un mensaje"
-                                        }
-                            })
-                        }
-                        />
-                        {errors.text && <p>{errors.text.message}</p>}
-                    </div>
-                    <button type="submit">Contactar</button>
-                </form>
-            </div>
+  const [mensaje, setMensaje] = useState("");
+  const [validMensaje, setValidMensaje] = useState(false);
+
+  const NAME_REGEX = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]{3,40}$/;
+  const EMAIL_REGEX = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+  const MENSAJE_REGEX = /^.{3,500}$/;
+
+  useEffect(() => {
+    nombreRef.current.focus();
+  }, []);
+
+  useEffect(() => {
+    setValidNombre(NAME_REGEX.test(nombre));
+  }, [nombre]);
+
+  useEffect(() => {
+    setValidEmail(EMAIL_REGEX.test(email));
+  }, [email]);
+
+  useEffect(() => {
+    setValidMensaje(MENSAJE_REGEX.test(mensaje));
+  }, [mensaje]);
+
+  return (
+    <div className="containerForm">
+      <form className="form">
+        <div className="form-row">
+          <div className="form-control">
+            <label htmlFor="nombre">
+              Nombre:
+              <AnimatePresence mode="wait">
+                {validNombre && (
+                  <motion.span
+                    key="nombre-ok"
+                    className="valid-icon"
+                    variants={iconVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    <FaCheck />
+                  </motion.span>
+                )}
+                {!validNombre && nombre && (
+                  <motion.span
+                    key="nombre-error"
+                    className="invalid-icon"
+                    variants={iconVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    <FaTimes />
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </label>
+            <input
+              type="text"
+              placeholder="Tu nombre"
+              ref={nombreRef}
+              autoComplete="off"
+              onChange={(e) => setNombre(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="form-control">
+            <label htmlFor="email">
+              Correo Electrónico:
+              <AnimatePresence mode="wait">
+                {validEmail && (
+                  <motion.span
+                    key="email-ok"
+                    className="valid-icon"
+                    variants={iconVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    <FaCheck />
+                  </motion.span>
+                )}
+                {!validEmail && email && (
+                  <motion.span
+                    key="email-error"
+                    className="invalid-icon"
+                    variants={iconVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    <FaTimes />
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </label>
+            <input
+              type="email"
+              placeholder="Tu correo electrónico"
+              autoComplete="off"
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
         </div>
-    )
+
+        <div className="form-control">
+          <label htmlFor="mensaje">
+            Mensaje:
+            <AnimatePresence mode="wait">
+              {validMensaje && (
+                <motion.span
+                  key="mensaje-ok"
+                  className="valid-icon"
+                  variants={iconVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
+                  <FaCheck />
+                </motion.span>
+              )}
+              {!validMensaje && mensaje && (
+                <motion.span
+                  key="mensaje-error"
+                  className="invalid-icon"
+                  variants={iconVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
+                  <FaTimes />
+                </motion.span>
+              )}
+            </AnimatePresence>
+          </label>
+          <textarea
+            placeholder="Tu mensaje"
+            rows={3}
+            onChange={(e) => setMensaje(e.target.value)}
+            required
+          />
+        </div>
+
+        <motion.button
+          initial={{ scale: 1 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          type="submit"
+          disabled={!validNombre || !validEmail || !validMensaje}
+        >
+          Contactar
+        </motion.button>
+      </form>
+    </div>
+  );
 }
