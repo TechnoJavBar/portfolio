@@ -1,33 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-
-.navegator {
-  display: flex;
-  justify-content: center;
-  background-color: transparent;
-  padding: 1rem;
-
-}
-
-.navegator ul {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-item a {
+/* Links con gradiente */
+.gradient-link {
   text-decoration: none;
   color: #ffffff;
   font-weight: 600;
   font-size: 1.1rem;
+  font-family: 'Ubuntu', sans-serif;
   transition: all 0.3s ease;
-  font-family: 'ubuntu', sans-serif;
 }
 
-.nav-item a:hover {
+.gradient-link:hover {
   color: transparent;
   background-image: linear-gradient(90deg, #06d7a0, #00b3ff);
   background-clip: text;
   -webkit-background-clip: text;
+}
+
+/* Toggle hamburguesa con gradiente al interactuar */
+.gradient-toggle .navbar-toggler-icon {
+  background-image: linear-gradient(90deg, #06d7a0, #00b3ff);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.gradient-toggle:hover .navbar-toggler-icon,
+.gradient-toggle:focus .navbar-toggler-icon {
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }

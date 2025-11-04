@@ -1,7 +1,25 @@
-.aboutMePage{
+.aboutMePage {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+/* Media Queries para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .aboutMePage {
+        gap: 15px;
+        /* reducir espacio */
+    }
+}
+
+/* Media Queries para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .aboutMePage {
+        flex-direction: column;
+        /* apila los elementos uno encima del otro */
+        align-items: center;
+        justify-content: center;
+    }
 }
