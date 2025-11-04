@@ -1,9 +1,8 @@
 .aside {
-    background-color: rgb(150, 150, 150);
+    background-color: transparent;
     position: fixed;
-    top: 250px;
     left: 25px;
-    width: 50px;
+    width: 250px;
     height: auto;
     align-items: center;    /* o el ancho que quieras */
     border-radius: 50px;
@@ -12,7 +11,8 @@
 .aside ul {
     display: flex;
     background-color: transparent;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     top: 0;
     list-style: none;
     padding: 0;
@@ -20,7 +20,6 @@
 }
 
 .aside li {
-    background-color: transparent;
     margin: 10px 0;
     color: black;
 }
@@ -30,7 +29,7 @@
 .FaInstagram,
 .FaFacebook {
     font-size: 2rem;
-    margin: 2px 0;
+    margin: 2px 2px;
 }
 .FaGithub{
     color:rgb(255, 255, 255);
@@ -43,30 +42,4 @@
 }
 .FaFacebook{
     color: rgb(0, 0, 255);
-}
-
-
-
-.iconGithub {
-    color: rgb(255, 255, 255);
-}
-
-.iconLinkedin {
-    color: rgb(81, 56, 248);
-}
-
-.iconInstagram {
-    color: rgb(247, 0, 255);
-}
-
-.iconFacebook {
-    color: rgb(0, 0, 255);
-}
-
-.iconGithub:hover,
-.iconLinkedin:hover,
-.iconInstagram:hover,
-.iconFacebook:hover {
-    transform: scale(1.2);
-    transition: transform 0.3s ease;
 }
