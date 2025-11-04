@@ -1,4 +1,4 @@
-import { Skills } from "../components/Skills.jsx";
+import { Skills } from "../components/skills.jsx";
 
 export function SkillsPage() {
   return (
