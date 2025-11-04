@@ -1,12 +1,14 @@
-import './header.css';
-import { Navegator } from './navegator';
+import "./header.css";
+import { Navegator } from "./navegator";
+import { LinksAside } from "./linksAside";
 
 export function Header() {
   return (
-    <header className='header'>
+    <header className="header">
       <div>
-          <Navegator />
+        <LinksAside />
+        <Navegator />
       </div>
     </header>
-  )
+  );
 }
