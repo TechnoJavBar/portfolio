@@ -26,3 +26,53 @@
     color: black;
 
 }
+
+.aside {
+    background-color: transparent;
+    position: static;
+    left: auto;
+    width: 250px;
+    height: auto;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.aside ul {
+    display: flex;
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 0;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+}
+
+.aside li {
+    margin: 10px 0;
+    color: black;
+}
+
+.FaGithub,
+.FaLinkedin,
+.FaInstagram,
+.FaFacebook {
+    font-size: 2rem;
+    margin: 2px 2px;
+}
+
+.FaGithub {
+    color: rgb(255, 255, 255);
+}
+
+.FaLinkedin {
+    color: rgb(81, 56, 248);
+}
+
+.FaInstagram {
+    color: rgb(247, 0, 255);
+}
+
+.FaFacebook {
+    color: rgb(0, 0, 255);
+}
