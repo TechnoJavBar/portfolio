@@ -9,7 +9,7 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   text-justify: distribute-all-lines;
-  font-family: 'ubuntu', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .aboutMe h2 {
@@ -23,4 +23,40 @@
   line-height: 1.7;
   margin-bottom: 1rem;
   color: #333;
+}
+
+/* Media Queries para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+  .aboutMe {
+    padding: 1.5rem;
+    max-width: 550px;
+    margin: 2.5rem auto;
+  }
+
+  .aboutMe h2 {
+    font-size: 1.8rem;
+  }
+
+  .aboutMe p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* Media Queries para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .aboutMe {
+    padding: 1rem;
+    max-width: 90%;
+    margin: 2rem auto;
+  }
+
+  .aboutMe h2 {
+    font-size: 1.5rem;
+  }
+
+  .aboutMe p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
 }
