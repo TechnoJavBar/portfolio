@@ -1,54 +1,71 @@
-.projectObject{
+.projectObject {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 300px;
-    height: 400px;
-    margin: 20px 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    background-color: #fff;
-    color: black;
-}
-
-.projectObject img{
+    justify-content: space-between;
     width: 100%;
-    height: auto;
-    background-color: black;
+    max-width: 320px;
+    min-height: 400px;
+    margin: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+    color: #222;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.projectObject h2{
-    margin: 10px 0;
-    font-size: 1.5rem;
+.projectObject:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+}
+
+.projectObject h2 {
+    margin: 16px 0 8px;
+    font-size: 1.4rem;
     text-align: center;
-    padding: 0 10px;
-    flex-grow: 1;
+    padding: 0 14px;
     color: #333;
+    font-weight: 600;
 }
 
-.projectObject p{
-    text-align: center;
-    padding: 0 10px;
-    flex-grow: 1;
-    color: #666;
+.projectObject p {
+    text-align: justify;
+    padding: 0 14px;
+    color: #555;
     font-size: 1rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
-.link{
-    text-decoration: none;
-    color: #ffffff;
-    margin: 5px 5px;
-    width: 9rem;
-    font-weight: bold;
-    background-color: gray;
-    padding: 10px 10px;
-    border-radius: 50px;
+/* Botón estilizado */
+.link {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    display: flex;
     gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    background: linear-gradient(90deg, #06d7a0, #04b58b);
+    padding: 12px 20px;
+    border-radius: 40px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 80%;
+    max-width: 10rem;
+    text-align: center;
+}
+
+.link:hover {
+    background: linear-gradient(90deg, #04b58b, #06d7a0);
+    transform: scale(1.05);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .projectObject {
+        width: 90%;
+        margin: 16px auto;
+    }
 }
