@@ -1,50 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+.skills-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 🔥 responsive */
-  gap: 10px;
-  justify-items: center;  /* centra cada item en su celda */
-  align-items: center;
-  margin: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
 }
 
 .skill-card {
-  width: 120px;
-  height: 140px;
-  background: white;
-  border: 2px solid;
+  background: #f8f9fa;
   border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  transition: background 0.3s;
   cursor: pointer;
+  font-family: 'ubuntu', sans-serif;
 }
 
-.skill-card h4 {
-  margin-top: 10px;
+.skill-card:hover {
+  background: #e6f7ff;
 }
 
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 50;
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.expanded-card {
-  width: 320px;
-  min-height: 300px;
-  background: white;
-  border: 3px solid;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0px 6px 20px rgba(0,0,0,0.25);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.skill-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Colores personalizados por tecnología */
+.react-icon {
+  color: #61DBFB;
+}
+
+.python-icon {
+  color: #3776AB;
+}
+
+.js-icon {
+  color: #F7DF1E;
+}
+
+.html-icon {
+  color: #E34F26;
+}
+
+.css-icon {
+  color: #1572B6;
+}
+
+.node-icon {
+  color: #339933;
+}
+
+.django-icon {
+  color: #186d4e;
+}
+
+.framer-icon {
+  color: #0055FF;
+}
+
+.java-icon {
+  color: #007396;
+}
+
+.linux-icon {
+  color: #FCC624;
+}
+
+.gitlab-icon {
+  color: #FC6D26;
+}
+
+.git-icon {
+  color: #F05032;
+}
+
+.github-icon {
+  color: #181717;
+}
+
+.aws-icon {
+  color: #FF9900;
+}
+
+.docker-icon {
+  color: #2496ED;
+}
+
+.raspberry-icon {
+  color: #C51A4A;
+}
+
+.mysql-icon {
+  color: #4479A1;
+}
+
+.bootstrap-icon {
+  color: #7952B3;
+}
+
+.gmail-icon {
+  color: #EA4335;
+}
+
+.microsoft-icon {
+  color: #0078D4;
+}
+
+.apache-icon {
+  color: #0E85CD;
+}
+
+.office-icon {
+  color: #D83B01;
+}
+
+.gemini-icon {
+  color: #4285F4;
+}
+
+.eclipse-icon {
+  color: #2C2255;
+}
+
+.vsc-icon {
+  color: #007ACC;
+}
+
+.visualstudio-icon {
+  color: #5C2D91;
+}
+
+.neo4j-icon {
+  color: #008CC1;
+}
+
+.xml-icon {
+  color: #0060A9;
+}
+
+.virtualbox-icon {
+  color: #183A61;
+}
+
+
+
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
 }
