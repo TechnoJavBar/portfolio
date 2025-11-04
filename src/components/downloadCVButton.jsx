@@ -1,6 +1,7 @@
 import "./downloadCVButton.css";
 import { motion } from "framer-motion";
 import { MdFileDownload } from "react-icons/md";
+import pdfFile from "/AntonioJavierBarrancaJimenez.pdf";
 
 export function DonwloadCVButton() {
   //Motion Values
@@ -28,6 +29,13 @@ export function DonwloadCVButton() {
     },
   };
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = pdfFile;
+    link.download = "AntonioJavierBarrancaJimenezCV.pdf";
+    link.click();
+  };
+
   return (
     <motion.button
       className="download-cv-button"
@@ -35,6 +43,7 @@ export function DonwloadCVButton() {
       initial="initial"
       whileHover="hover"
       whileTap="tap"
+      onClick={handleDownload}
     >
       <motion.span variants={spanVariants}>
         <MdFileDownload />
