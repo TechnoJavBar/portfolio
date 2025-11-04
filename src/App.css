@@ -4,5 +4,25 @@
     background-repeat: no-repeat;
     background-clip: border-box;
     background-attachment: fixed;
+    background-position: center;
     min-height: 100vh;
+}
+
+/* 📱 Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .main {
+        background-attachment: scroll;
+        /* Evita bugs en móviles */
+        background-position: center top;
+        background-size: cover;
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        background-position: center;
+        background-size: cover;
+        min-height: 100vh;
+    }
 }
