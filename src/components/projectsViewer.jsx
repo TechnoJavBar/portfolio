@@ -10,6 +10,7 @@ export function ProjectsViewer() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     async function fetchRepos() {
       try {
         const request = await fetch(
@@ -54,7 +55,6 @@ export function ProjectsViewer() {
         {repos.map((repo) => (
           <ProjectObject
             key={repo.id}
-            image=""
             title={repo.name}
             description={repo.description || "sin descripcion"}
             link1={""}
