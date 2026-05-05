@@ -1,10 +1,9 @@
-import "./contactForm.css";
+import "./css/contactForm.css";
 import { useState, useEffect, useRef } from "react";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import ToastContainer from "react-bootstrap/ToastContainer";
 import Toast from "react-bootstrap/Toast";
-import { set } from "react-hook-form";
 
 // Variants para la animación del icono
 const iconVariants = {
