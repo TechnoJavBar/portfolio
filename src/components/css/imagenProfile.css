@@ -1,6 +1,4 @@
 .nav-profile-wrapper {
-  width: 40px;  /* Tamaño típico de avatar en Smart TV */
-  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
