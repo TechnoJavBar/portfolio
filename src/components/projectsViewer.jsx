@@ -1,8 +1,6 @@
-import "./projectsViewer.css";
+import "./css/projectsViewer.css";
 import { ProjectObject } from "./projectObject";
-import interfazBSP from "../assets/interfazBSP.jpg";
 import { useState, useEffect } from "react";
-import { image } from "framer-motion/client";
 import { motion } from "framer-motion";
 
 export function ProjectsViewer() {
