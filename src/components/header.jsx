@@ -9,7 +9,7 @@ export function Header() {
     <header className="header">
       <nav className="nav">
         <div className="nav-izda">
-          <ImagenProfile imagen={profilePhoto} src="AJ" />
+          <ImagenProfile imagen={profilePhoto} px={40} src="AJ" />
           <Link to={"/"}>Inicio</Link>
           <Link to={"/about"}>Sobre mí</Link>
           <Link to={"/projects"}>Proyectos</Link>
