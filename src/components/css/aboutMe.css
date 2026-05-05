@@ -1,11 +1,15 @@
 @import "variables.css";
 
 .aboutMe {
-  padding: 2rem;
-  background-color: #f9fafb;
+  padding: 3rem;
+
+  background-color: transparent;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
   border-radius: 12px;
-  max-width: 650px;
-  margin: 3rem auto;
+  max-width: 800px;
+  margin: 6rem 0 0 0;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   text-justify: distribute-all-lines;
@@ -13,8 +17,9 @@
 }
 
 .aboutMe h2 {
+  display: flex;
   font-size: 2rem;
-  color: #a32ff0;
+  color: var(--color-primary-text);
   margin-bottom: 1.2rem;
 }
 
@@ -22,7 +27,7 @@
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 1rem;
-  color: #333;
+  color: var(--color-primary-text);
 }
 
 /* Media Queries para pantallas medianas (tablets) */
