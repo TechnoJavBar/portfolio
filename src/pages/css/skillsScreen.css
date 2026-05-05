@@ -1,0 +1,24 @@
+.skillsScreen{  
+  /* 1. Eliminamos el margen que crea el hueco negro */
+  margin-top: 0;
+
+  /* 2. Forzamos a que ocupe toda la pantalla visible */
+  min-height: 100vh;
+  width: 100%;
+
+  /* 3. Ajustes de fondo */
+  background-image: url("../../assets/fondoPorfolio4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+
+  /* IMPORTANTE: Cambia background-clip a border-box o elimínalo */
+  background-clip: border-box;
+
+  /* 4. Si el Header está arriba, este contenedor debe subir */
+  position: absolute;
+  top: 0;
+
+  padding-top: 90px;
+}
