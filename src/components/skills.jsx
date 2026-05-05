@@ -32,7 +32,7 @@ import { BiLogoVisualStudio } from "react-icons/bi";
 import { DiVisualstudio } from "react-icons/di";
 import { BsFiletypeXml } from "react-icons/bs";
 import { TbBrandOffice } from "react-icons/tb";
-import "./skills.css";
+import "./css/skills.css";
 import { motion } from "framer-motion";
 
 const skills = [

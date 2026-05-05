@@ -1,4 +1,4 @@
-import "./downloadCVButton.css";
+import "./css/downloadCVButton.css";
 import { motion } from "framer-motion";
 import { MdFileDownload } from "react-icons/md";
 import pdfFile from "/AntonioJavierBarrancaJimenez.pdf";

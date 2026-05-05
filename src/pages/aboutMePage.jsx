@@ -1,7 +1,7 @@
 import {ImagenProfile} from "../components/imagenProfile.jsx";
 import profilePic from "../assets/fotoAntonioJavierBarrancajimenez.png";
 import {AboutMe} from "../components/aboutMe.jsx";
-import "./aboutMePage.css";
+import "./css/aboutMePage.css";
 
 export function AboutMePage(){
     return(
