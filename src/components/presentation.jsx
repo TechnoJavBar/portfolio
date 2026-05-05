@@ -1,21 +1,13 @@
-import "./presentation.css";
-import profilePhoto from "../assets/fotoAntonioJavierBarrancajimenez.png";
-import { ImagenProfile } from "./imagenProfile";
+import "./css/presentation.css";
 import { DonwloadCVButton } from "../components/downloadCVButton";
+import { SkillComponent } from "./skillComponent.jsx";
+
 export function Presentation() {
   return (
-    <div className="presentacion">
-      <div className="presentacionInfo">
-        <h1>Antonio Javier Barranca Jimenez</h1>
-        <p>Desarrollador aplicaciones web</p>
-        <DonwloadCVButton />
+      <div className="tv-interface">
+        <span className="tagline"><div className="point-tagline"></div> EN TENDENCIA</span>
+        <h1 className="main-title">Antonio Javier Barranca</h1>
       </div>
-      <div>
-        <ImagenProfile
-          imagen={profilePhoto}
-          alt="Foto de perfil Antonio Barranca"
-        />
-      </div>
-    </div>
+
   );
 }
