@@ -1,0 +1,30 @@
+/* CONTENEDOR */
+.skills-container {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  cursor: grab;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.skills-container::-webkit-scrollbar {
+  display: none;
+}
+
+.skills-container:active {
+  cursor: grabbing;
+}
+
+/* TRACK */
+.skills-wrapper {
+  display: flex;
+  width: max-content;
+}
+
+/* ITEMS */
+.skill-item {
+  width: 140px;        /* 🔥 controla el layout */
+  flex-shrink: 0;      /* 🔥 evita deformaciones */
+  margin-right: 50px;  /* separación entre items */
+}
