@@ -1,4 +1,4 @@
-import './aboutMe.css'
+import './css/aboutMe.css'
 import { motion} from 'framer-motion';
 
 export function AboutMe() {
