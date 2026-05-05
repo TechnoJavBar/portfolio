@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./projectObject.css";
+import "./css/projectObject.css";
 import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -25,17 +25,7 @@ export function ProjectObject({ key, title, description, link1, link2 }) {
         overflow: "hidden",
       }}
     >
-      <h2
-        style={{
-          fontSize: "1.7rem",
-          fontWeight: "700",
-          marginBottom: "0.7rem",
-          letterSpacing: "1px",
-          background: "linear-gradient(90deg, #ff8c00, #ff0080)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-        }}
-      >
+      <h2>
         {title}
       </h2>
       <p
