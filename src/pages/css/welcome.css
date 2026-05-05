@@ -1,0 +1,35 @@
+.welcome-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  /* 1. Eliminamos el margen que crea el hueco negro */
+  margin-top: 0; 
+  
+  /* 2. Forzamos a que ocupe toda la pantalla visible */
+  min-height: 100vh;
+  width: 100%;
+
+  /* 3. Ajustes de fondo */
+  /* background-image: url("../../assets/fondoPorfolio1.jpg"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+
+  animation: changeBackground 90s infinite ease-in-out;
+  
+  /* IMPORTANTE: Cambia background-clip a border-box o elimínalo */
+  background-clip: border-box; 
+  
+  /* 4. Si el Header está arriba, este contenedor debe subir */
+  position: absolute;
+  top: 0;
+}
+
+@keyframes changeBackground {
+  0%, 100% { background-image: url("../../assets/fondoPorfolio1.jpg"); }
+  33.33% { background-image: url("../../assets/fondoPorfolio2.jpg"); }
+  66.66% { background-image: url("../../assets/fondoPorfolio3.jpg"); }
+}
