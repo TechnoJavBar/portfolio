@@ -17,156 +17,30 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 4rem;
   list-style: none;
   padding: 0;
 }
 
 .skill-card {
-  background: #f8f9fa;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem 1rem;
+  background: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: background 0.3s;
   cursor: pointer;
+  margin: 10px auto;
   font-family: var(--font-primary-text);
 }
 
-.skill-card:hover {
-  background: #e6f7ff;
-}
-
-.skill-icon {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
 .skill-name {
+  margin-top: 5px;
   font-size: 1rem;
   font-weight: 500;
-  color: #333;
+  color: var(--color-primary-text);
 }
 
-/* Colores personalizados por tecnología */
-.react-icon {
-  color: #61DBFB;
-}
-
-.python-icon {
-  color: #3776AB;
-}
-
-.js-icon {
-  color: #F7DF1E;
-}
-
-.html-icon {
-  color: #E34F26;
-}
-
-.css-icon {
-  color: #1572B6;
-}
-
-.node-icon {
-  color: #339933;
-}
-
-.django-icon {
-  color: #186d4e;
-}
-
-.framer-icon {
-  color: #0055FF;
-}
-
-.java-icon {
-  color: #007396;
-}
-
-.linux-icon {
-  color: #FCC624;
-}
-
-.gitlab-icon {
-  color: #FC6D26;
-}
-
-.git-icon {
-  color: #F05032;
-}
-
-.github-icon {
-  color: #181717;
-}
-
-.aws-icon {
-  color: #FF9900;
-}
-
-.docker-icon {
-  color: #2496ED;
-}
-
-.raspberry-icon {
-  color: #C51A4A;
-}
-
-.mysql-icon {
-  color: #4479A1;
-}
-
-.bootstrap-icon {
-  color: #7952B3;
-}
-
-.gmail-icon {
-  color: #EA4335;
-}
-
-.microsoft-icon {
-  color: #0078D4;
-}
-
-.apache-icon {
-  color: #0E85CD;
-}
-
-.office-icon {
-  color: #D83B01;
-}
-
-.gemini-icon {
-  color: #4285F4;
-}
-
-.eclipse-icon {
-  color: #2C2255;
-}
-
-.vsc-icon {
-  color: #007ACC;
-}
-
-.visualstudio-icon {
-  color: #5C2D91;
-}
-
-.neo4j-icon {
-  color: #008CC1;
-}
-
-.xml-icon {
-  color: #0060A9;
-}
-
-.virtualbox-icon {
-  color: #183A61;
-}
 
 
 
