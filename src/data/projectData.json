@@ -1,23 +1,37 @@
 [
   {
     "name": "BarrancaSalud Plus",
-    "img": "../assets/interfazBSP.jpg",
-    "descripcion": "BarrancaSalud Plus e una aplicación de gestión clínica diseñada para mejorar la eficiencia de las consultas médicas. Permite a los profesionales de la salud gestionar historiales médicos, realizar diagnósticos y visualizar datos clínicos en tiempo real. En cuanto a los usuarios, les permite acceder en todo momento a su historial clínico, recetas y un calendario en el cual pueden gestionar sus citas médicas",
+    "img": "/images/interfazBSP.jpg",
+    "descripcion": "BarrancaSalud Plus es una aplicación de gestión clínica diseñada para mejorar la eficiencia de las consultas médicas. Permite a los profesionales de la salud gestionar historiales médicos, realizar diagnósticos y visualizar datos clínicos en tiempo real. En cuanto a los usuarios, les permite acceder en todo momento a su historial clínico, recetas y un calendario en el cual pueden gestionar sus citas médicas",
     "link1": "https://github.com/TechnoJavBar/BarrancaSalud-Plus.git",
     "link2": ""
   },
   {
     "name": "Jarmazon",
-    "img": "",
-    "descripcion": "Jarmazon es un pequeño ecommerce creado con la tecnología de Django",
+    "img": "/images/mariaflordejaraimg.png",
+    "descripcion": "Jarmazon es un pequeño e-commerce creado completamente con la tecnología de Django. Su finalidad es crear una e-commerce para poder aprender la tecnología con la cual se ha creado",
     "link1": "https://github.com/TechnoJavBar/Jarmazon.git",
     "link2": ""
   },
   {
     "name": "Mariaflordejara",
-    "img": "../assets/mariaflordejaraimg.png",
-    "descripcion": "Mariaflordejara es una combinación de ecommerce con un catálogo online desarrollado con react y node.js entre otras tecnologías",
+    "img": "/images/mariaflordejaraimg.png",
+    "descripcion": "Mariaflordejara es una combinación de e-commerce con un catálogo online desarrollado con react y node.js entre otras tecnologías",
     "link1": "https://github.com/TechnoJavBar/frontendMariaFlorDeJara.git",
     "link2": "https://mariaflordejara.vercel.app"
+  },
+  {
+    "name": "astroView",
+    "img": "/images/mariaflordejaraimg.png",
+    "descripcion": "",
+    "link1": "https://github.com/TechnoJavBar/astroView.git",
+    "link2": ""
+  },
+  {
+    "name": "Neo4jCRUD",
+    "img": "/images/mariaflordejaraimg.png",
+    "descripcion": "",
+    "link1": "https://github.com/TechnoJavBar/Neo4jCRUD.git",
+    "link2": ""
   }
 ]
