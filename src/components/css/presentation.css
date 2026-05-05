@@ -1,0 +1,66 @@
+@import "variables.css";
+
+.tv-interface {
+  text-align: left;
+  max-width: 800px;
+  animation: fadeIn 1s ease-out;
+  
+  /* Añade estas líneas para asegurar el alineamiento */
+  margin-left: 0;
+  margin-right: auto;
+  padding-left: 5%;
+  margin-top: 20%;
+}
+
+.tagline {
+  display: flex;
+  gap: 1em;
+  font-family: var(--font-primary-text);
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: var(--trending-text-color);
+  text-transform: uppercase;
+}
+
+.point-tagline{
+  font-family: var(--font-primary-text);
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: var(--trending-text-color);
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+
+  animation: parpadeo 1.5s infinite;
+}
+
+.main-title {
+  font-size: 5rem;
+  color: white;
+  text-transform: uppercase;
+  font-family: var(--font-primary-text);
+  margin-left: 0; /* Asegura que el título no tenga sangría */
+}
+
+.description {
+  font-size: 1.4rem;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+
+@keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

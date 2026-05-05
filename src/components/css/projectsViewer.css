@@ -1,0 +1,44 @@
+@import "variables.css";
+
+.projectsViewer{
+    text-align: center;
+    margin-top: 2rem;
+    font-family: var(--font-primary-text);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.projectsViewer h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary-text);
+    font-family: var(--color-primary-text);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+}
+
+.container-projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.container-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid var(--divider);
+    border-top-color: #ff0088;
+    will-change: transform;
+}
